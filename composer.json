@@ -1,0 +1,23 @@
+{
+    "name": "php-unity/helpers",
+    "description": "A collection of helper classes for Unity framework packages",
+    "version": "0.1",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "e200",
+            "email": "eleandro@inbox.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+	    "psr-4": {
+		    "Unity\\Helpers\\": "src/"
+	    }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.2"
+    }
+}
