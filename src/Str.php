@@ -1,6 +1,6 @@
 <?php
 
-namespace Unity\Helpers;
+namespace Unity\Support;
 
 class Str
 {

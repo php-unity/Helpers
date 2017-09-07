@@ -1,6 +1,6 @@
 {
-    "name": "php-unity/helpers",
-    "description": "A collection of helper classes for Unity framework packages",
+    "name": "unity/support",
+    "description": "A collection of support classes used in Unity framework",
     "version": "0.1",
     "type": "library",
     "license": "MIT",
@@ -14,7 +14,7 @@
     "require": {},
     "autoload": {
 	    "psr-4": {
-		    "Unity\\Helpers\\": "src/"
+		    "Unity": ""
 	    }
     },
     "require-dev": {
