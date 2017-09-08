@@ -14,7 +14,7 @@ class Str
         return strpos($source, $needle) == 0;
     }
 
-    static function endsWIth($needle, $source)
+    static function endsWith($needle, $source)
     {
         $sourceLength = strlen($source);
 
