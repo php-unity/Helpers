@@ -14,7 +14,7 @@
     "require": {},
     "autoload": {
 	    "psr-4": {
-		    "Unity\\": ""
+		    "Unity\\": "src"
 	    }
     },
     "require-dev": {
