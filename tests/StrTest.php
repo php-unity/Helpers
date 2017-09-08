@@ -1,6 +1,6 @@
 <?php
 
-use Unity\Helpers\Str;
+use Unity\Support\Str;
 use PHPUnit\Framework\TestCase;
 
 class StrTest extends TestCase
