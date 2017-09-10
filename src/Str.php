@@ -2,6 +2,11 @@
 
 namespace Unity\Support;
 
+/**
+ * Class Arr
+ *
+ * @author Eleandro Duzentos <eleandro@inbox.ru>
+ */
 class Str
 {
     static function contains($needle, $source)
