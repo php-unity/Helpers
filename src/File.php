@@ -2,6 +2,11 @@
 
 namespace Unity\Support;
 
+/**
+ * Class Arr
+ *
+ * @author Eleandro Duzentos <eleandro@inbox.ru>
+ */
 class File
 {
     /**
@@ -16,6 +21,8 @@ class File
 
     /**
      * @param $path string File path
+     *
+     * @return bool
      */
     static function isFile($path)
     {
@@ -24,6 +31,8 @@ class File
 
     /**
      * @param $path string Dir path
+     *
+     * @return bool
      */
     static function isDir($path)
     {
@@ -32,6 +41,8 @@ class File
 
     /**
      * @param $path string File|Dir path
+     *
+     * @return bool
      */
     static function exists($path){
         return file_exists($path);
