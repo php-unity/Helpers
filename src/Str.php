@@ -3,7 +3,7 @@
 namespace Unity\Support;
 
 /**
- * Class Arr
+ * Class Str
  *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
  */
