@@ -3,23 +3,23 @@
 namespace Unity\Support;
 
 /**
- * Class Str
+ * Class Str.
  *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
  */
 class Str
 {
-    static function contains($needle, $source)
+    public static function contains($needle, $source)
     {
         return strpos($source, $needle) !== false;
     }
 
-    static function startsWith($needle, $source)
+    public static function startsWith($needle, $source)
     {
         return strpos($source, $needle) == 0;
     }
 
-    static function endsWith($needle, $source)
+    public static function endsWith($needle, $source)
     {
         $sourceLength = strlen($source);
 

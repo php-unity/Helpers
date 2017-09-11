@@ -1,24 +1,24 @@
 <?php
 
-use Unity\Support\Str;
 use PHPUnit\Framework\TestCase;
+use Unity\Support\Str;
 
 class StrTest extends TestCase
 {
-    function testContains()
+    public function testContains()
     {
         $this->assertEquals(true, Str::Contains('@', '@'));
         $this->assertEquals(false, Str::Contains('$', '@'));
     }
 
-    function testStartsWith()
+    public function testStartsWith()
     {
         $this->assertEquals(true, Str::startsWith('@', '@'));
         $this->assertEquals(true, Str::startsWith('@', '@_'));
         $this->assertEquals(false, Str::startsWith('@', '_@'));
     }
 
-    function testEndsWith()
+    public function testEndsWith()
     {
         $this->assertEquals(true, Str::endsWith('@', '@'));
         $this->assertEquals(true, Str::endsWith('@', '_@'));

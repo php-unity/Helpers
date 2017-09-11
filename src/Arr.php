@@ -3,21 +3,21 @@
 namespace Unity\Support;
 
 /**
- * Class Arr
+ * Class Arr.
  *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
  */
 class Arr
 {
     /**
-     * Searches for values in nested arrays
+     * Searches for values in nested arrays.
      *
      * @param array $array Top most array
-     * @param array $keys Collection of keys
+     * @param array $keys  Collection of keys
      *
      * @return mixed|null
      */
-    static function rSearch(array &$array, array $keys)
+    public static function rSearch(array &$array, array $keys)
     {
         $data = null;
         $count = count($keys);
@@ -35,24 +35,25 @@ class Arr
         for ($i = 0; $i < $count; $i++) {
             $key = $keys[$i];
 
-            if ($i == 0)
+            if ($i == 0) {
                 $data = $array[$key];
-            else
+            } else {
                 $data = $data[$key];
+            }
         }
 
         return $data;
     }
 
     /**
-     * Merge two arrays
+     * Merge two arrays.
      *
      * @param array $array1
      * @param array $array2
      *
      * @return array
      */
-    static function merge(array &$array1, array &$array2)
+    public static function merge(array &$array1, array &$array2)
     {
         return array_merge($array1, $array2);
     }
