@@ -35,10 +35,11 @@ class Arr
         for ($i = 0; $i < $count; $i++) {
             $key = $keys[$i];
 
-            if ($i == 0)
+            if ($i == 0) {
                 $data = $array[$key];
-            else
+            } else {
                 $data = $data[$key];
+            }
         }
 
         return $data;
