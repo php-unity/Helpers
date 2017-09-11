@@ -5,7 +5,7 @@ use Unity\Support\Arr;
 
 class ArrTest extends TestCase
 {
-    public function testRSearch()
+    public function testnestedSearch()
     {
         $array = [
             'database' => [
@@ -19,7 +19,7 @@ class ArrTest extends TestCase
 
         $keys = ['database', 'users', 'eleandro', 'password'];
 
-        $this->assertEquals('e200', Arr::rSearch($array, $keys));
+        $this->assertEquals('e200', Arr::nestedSearch($array, $keys));
     }
 
     public function testMerge()
