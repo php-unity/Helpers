@@ -17,7 +17,7 @@ class Arr
      *
      * @return mixed|null
      */
-    public static function nestedSearch(array &$array, array &$keys)
+    public static function nestedSearch(array $array, array $keys)
     {
         $data = null;
         $count = count($keys);
@@ -53,7 +53,7 @@ class Arr
      *
      * @return array
      */
-    public static function merge(array &$array1, array &$array2)
+    public static function merge(array $array1, array $array2)
     {
         return array_merge($array1, $array2);
     }
