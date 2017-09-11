@@ -1,7 +1,7 @@
 {
     "name": "unity/support",
     "description": "A collection of support classes used in Unity framework",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "type": "library",
     "license": "MIT",
     "authors": [
