@@ -10,14 +10,14 @@ namespace Unity\Support;
 class Arr
 {
     /**
-     * Searches for values in nested arrays.
+     * Gets values in nested arrays.
      *
-     * @param array $array Top most array
-     * @param array $keys  Collection of keys
+     * @param array $keys         Keys to match
+     * @param array $mainArray    The top most array
      *
-     * @return mixed|null
+     * @return mixed
      */
-    public static function nestedSearch(array $array, array $keys)
+    public static function nestedGet(array $keys, array $mainArray)
     {
         $data = null;
         $count = count($keys);
@@ -27,22 +27,67 @@ class Arr
          * return the $array data associated to that key.
          *
          * If $keys contains more then one key, we access
-         * and stores the first $array[$key] data (it must be an array)
+         * and stores the first $mainArray[$key] data (it must be an array)
          * to the $data, and we do the same with
          * the remaining of keys until they finish, the
-         * last $searchKeys contains the value
+         * last $keys contains the value
          */
         for ($i = 0; $i < $count; $i++) {
             $key = $keys[$i];
 
             if ($i == 0) {
-                $data = $array[$key];
+                $data = $mainArray[$key];
             } else {
                 $data = $data[$key];
             }
         }
 
         return $data;
+    }
+
+    /**
+     * Gets values in nested arrays.
+     *
+     * @param array $keys         Keys to match
+     * @param array $mainArray    The top most array
+     *
+     * @return mixed
+     */
+    public static function nestedHas(array $keys, array $mainArray)
+    {
+        $data = null;
+        $count = count($keys);
+
+        /*
+         * If $keys contains only one key, we just
+         * returns if that key exists.
+         *
+         * If $keys contains more then one key, we first check
+         * if the first key exists, if not, we return false
+         * imediatly, else, we keep checking if the remaining keys
+         * exists until we find one that does'nt exists and return false
+         * or return true if all keys exists.
+         */
+        for ($i = 0; $i < $count; $i++) {
+            $key = $keys[$i];
+
+            if ($i == 0) {
+                if (!isset($mainArray[$key])) {
+                    return false;
+                }
+
+                $data = $mainArray[$key];
+            } else {
+                if (!isset($data[$key])) {
+                    return false;
+                }
+
+                $data = $data[$key];
+            }
+
+            if (($i + 1) == $count)
+                return true;
+        }
     }
 
     /**
