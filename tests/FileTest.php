@@ -12,7 +12,7 @@ class FileTest extends TestCase
         parent::setUp();
 
         $dir = [
-            'file.php' => ''
+            'file.php' => '',
         ];
 
         $virtualFolder = \org\bovigo\vfs\vfsStream::setup('tmp', 444, $dir);
@@ -20,21 +20,21 @@ class FileTest extends TestCase
         $this->folder = $virtualFolder->url();
     }
 
-    function testExists()
+    public function testExists()
     {
         $this->assertTrue(File::exists($this->folder));
         $this->assertFalse(File::exists(null));
     }
 
-    function testIsFile()
+    public function testIsFile()
     {
-        $file = $this->folder . DIRECTORY_SEPARATOR . 'file.php';
+        $file = $this->folder.DIRECTORY_SEPARATOR.'file.php';
 
         $this->assertTrue(File::isFile($file));
         $this->assertFalse(File::isFile(null));
     }
 
-    function testIsDir()
+    public function testIsDir()
     {
         $this->assertTrue(File::isDir($this->folder));
         $this->assertFalse(File::isDir(null));

@@ -3,20 +3,22 @@
 namespace Unity\Support;
 
 /**
- * Class File
+ * Class File.
  *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
  */
 class File
 {
     /**
-     * Returns the extension
+     * Returns the extension.
      *
      * @param $filename
+     *
      * @return bool|string
      */
-    static function ext($filename) {
-        return substr(strrchr($filename, "."), 1);
+    public static function ext($filename)
+    {
+        return substr(strrchr($filename, '.'), 1);
     }
 
     /**
@@ -24,7 +26,7 @@ class File
      *
      * @return bool
      */
-    static function isFile($path)
+    public static function isFile($path)
     {
         return is_file($path);
     }
@@ -34,7 +36,7 @@ class File
      *
      * @return bool
      */
-    static function isDir($path)
+    public static function isDir($path)
     {
         return is_dir($path);
     }
@@ -44,7 +46,8 @@ class File
      *
      * @return bool
      */
-    static function exists($path){
+    public static function exists($path)
+    {
         return file_exists($path);
     }
 }
