@@ -20,6 +20,26 @@ class FileTest extends TestCase
         $this->folder = $virtualFolder->url();
     }
 
+    public function testName()
+    {
+        $this->assertEquals('file', File::name('file.php'));
+    }
+
+    public function testBaseName()
+    {
+        $this->assertEquals('file.php', File::baseName('file.php'));
+    }
+
+    public function testExt()
+    {
+        $this->assertEquals('php', File::ext('file.php'));
+    }
+
+    public function testParentDir()
+    {
+        $this->assertEquals('folder', File::parentDir('folder/file.php'));
+    }
+
     public function testExists()
     {
         $this->assertTrue(File::exists($this->folder));
