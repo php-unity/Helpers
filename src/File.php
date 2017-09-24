@@ -10,15 +10,51 @@ namespace Unity\Support;
 class File
 {
     /**
+     * Returns the file name.
+     *
+     * @param $path
+     *
+     * @return string
+     */
+    public static function name($path)
+    {
+        return pathinfo($path, PATHINFO_FILENAME);
+    }
+
+    /**
+     * Returns the file base name.
+     *
+     * @param $path
+     *
+     * @return string
+     */
+    public static function baseName($path)
+    {
+        return pathinfo($path, PATHINFO_BASENAME);
+    }
+
+    /**
      * Returns the extension.
      *
-     * @param $filename
+     * @param $path
      *
      * @return bool|string
      */
-    public static function ext($filename)
+    public static function ext($path)
     {
-        return substr(strrchr($filename, '.'), 1);
+        return pathinfo($path, PATHINFO_EXTENSION);
+    }
+
+    /**
+     * Returns the parent folder.
+     *
+     * @param $path
+     *
+     * @return string
+     */
+    public static function parentDir($path)
+    {
+        return pathinfo($path, PATHINFO_DIRNAME);
     }
 
     /**
@@ -39,6 +75,26 @@ class File
     public static function isDir($path)
     {
         return is_dir($path);
+    }
+
+    /**
+     * @param $path strings
+     *
+     * @return bool
+     */
+    public static function isWritable($path)
+    {
+        return is_writable($path);
+    }
+
+    /**
+     * @param $path strings
+     *
+     * @return bool
+     */
+    public static function isReadable($path)
+    {
+        return is_readable($path);
     }
 
     /**
