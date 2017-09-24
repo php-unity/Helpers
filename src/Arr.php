@@ -12,8 +12,8 @@ class Arr
     /**
      * Gets values in nested arrays.
      *
-     * @param array $keys         Keys to match
-     * @param array $mainArray    The top most array
+     * @param array $keys      Keys to match
+     * @param array $mainArray The top most array
      *
      * @return mixed
      */
@@ -48,10 +48,10 @@ class Arr
     /**
      * Gets values in nested arrays.
      *
-     * @param array $keys         Keys to match
-     * @param array $mainArray    The top most array
+     * @param array $keys      Keys to match
+     * @param array $mainArray The top most array
      *
-     * @return mixed
+     * @return bool
      */
     public static function nestedHas(array $keys, array $mainArray)
     {
