@@ -5,6 +5,8 @@ namespace Unity\Support;
 /**
  * Class File.
  *
+ * A Collection of methods that provides support to work with file system.
+ *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
  */
 class File
@@ -12,11 +14,11 @@ class File
     /**
      * Returns the file name.
      *
-     * @param $path
+     * @param string $path
      *
      * @return string
      */
-    public static function name($path)
+    public static function name(string $path)
     {
         return pathinfo($path, PATHINFO_FILENAME);
     }
@@ -24,11 +26,11 @@ class File
     /**
      * Returns the file base name.
      *
-     * @param $path
+     * @param string $path
      *
      * @return string
      */
-    public static function baseName($path)
+    public static function baseName(string $path)
     {
         return pathinfo($path, PATHINFO_BASENAME);
     }
@@ -36,11 +38,11 @@ class File
     /**
      * Returns the extension.
      *
-     * @param $path
+     * @param string $path
      *
      * @return bool|string
      */
-    public static function ext($path)
+    public static function ext(string $path)
     {
         return pathinfo($path, PATHINFO_EXTENSION);
     }
@@ -48,62 +50,12 @@ class File
     /**
      * Returns the parent folder.
      *
-     * @param $path
+     * @param string $path
      *
      * @return string
      */
-    public static function parentDir($path)
+    public static function parentDir(string $path)
     {
         return pathinfo($path, PATHINFO_DIRNAME);
-    }
-
-    /**
-     * @param $path string File path
-     *
-     * @return bool
-     */
-    public static function isFile($path)
-    {
-        return is_file($path);
-    }
-
-    /**
-     * @param $path string Dir path
-     *
-     * @return bool
-     */
-    public static function isDir($path)
-    {
-        return is_dir($path);
-    }
-
-    /**
-     * @param $path strings
-     *
-     * @return bool
-     */
-    public static function isWritable($path)
-    {
-        return is_writable($path);
-    }
-
-    /**
-     * @param $path strings
-     *
-     * @return bool
-     */
-    public static function isReadable($path)
-    {
-        return is_readable($path);
-    }
-
-    /**
-     * @param $path string File|Dir path
-     *
-     * @return bool
-     */
-    public static function exists($path)
-    {
-        return file_exists($path);
     }
 }
