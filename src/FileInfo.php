@@ -8,6 +8,8 @@ namespace Unity\Support;
  * Provides file informations.
  *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
+ *
+ * @link   https://github.com/e200/
  */
 class FileInfo
 {
