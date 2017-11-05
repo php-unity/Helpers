@@ -18,7 +18,7 @@ class Str
      *
      * @param string $needle
      * @param string $string
-     * 
+     *
      * @return bool
      */
     public function contains($needle, $string)
@@ -31,7 +31,7 @@ class Str
      *
      * @param string $needle
      * @param string $string
-     * 
+     *
      * @return bool
      */
     public function startsWith($needle, $string)
@@ -44,7 +44,7 @@ class Str
      *
      * @param string $needle
      * @param string $string
-     * 
+     *
      * @return bool
      */
     public function endsWith($needle, $string)
