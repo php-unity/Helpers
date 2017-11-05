@@ -5,24 +5,52 @@ namespace Unity\Support;
 /**
  * Class Str.
  *
+ * Contains methods that helps working with strings.
+ *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
+ *
+ * @link   https://github.com/e200/
  */
 class Str
 {
-    public static function contains($needle, $source)
+    /**
+     * Checks if a `$needle` exists into the `$string`.
+     *
+     * @param string $needle
+     * @param string $string
+     * 
+     * @return bool
+     */
+    public function contains($needle, $string)
     {
-        return strpos($source, $needle) !== false;
+        return strpos($string, $needle) !== false;
     }
 
-    public static function startsWith($needle, $source)
+    /**
+     * Checks if a string starts with `$needle`.
+     *
+     * @param string $needle
+     * @param string $string
+     * 
+     * @return bool
+     */
+    public function startsWith($needle, $string)
     {
-        return strpos($source, $needle) == 0;
+        return strpos($string, $needle) == 0;
     }
 
-    public static function endsWith($needle, $source)
+    /**
+     * Checks if a string ends with `$needle`.
+     *
+     * @param string $needle
+     * @param string $string
+     * 
+     * @return bool
+     */
+    public function endsWith($needle, $string)
     {
-        $sourceLength = strlen($source);
+        $stringLength = strlen($string);
 
-        return strpos($source, $needle) == ($sourceLength - 1);
+        return strpos($string, $needle) == ($stringLength - 1);
     }
 }
