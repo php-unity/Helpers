@@ -2,7 +2,7 @@
 
 /**
  * Global helper functions.
- * 
+ *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
  *
  * @link   https://github.com/e200/
@@ -13,7 +13,7 @@
  * only white spaces.
  *
  * @param string $string
- * 
+ *
  * @return bool
  */
 function isWhiteSpaceOrNull($string)
